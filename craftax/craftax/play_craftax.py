@@ -115,7 +115,8 @@ class CraftaxRenderer:
 
         surface = pygame.surfarray.make_surface(np.array(pixels).transpose((1, 0, 2)))
         self.screen_surface.blit(surface, (0, 0))
-
+        return pixels
+    
     def is_quit_requested(self):
         for event in self.pygame_events:
             if event.type == pygame.QUIT:
